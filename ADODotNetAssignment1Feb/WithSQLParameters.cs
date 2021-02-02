@@ -194,7 +194,8 @@ namespace ADODotNetAssignment1Feb
         private static void WithParameterFunc()
         {
             Console.WriteLine("Menu Driven for program using SQL parameters");
-            while (true)
+            bool value = true;
+            while (value)
             {
                 Console.WriteLine("-------------------------------------------------------");
                 Console.WriteLine("1-- Insert a row using SQL Parameters");
@@ -233,6 +234,10 @@ namespace ADODotNetAssignment1Feb
                         Console.WriteLine("Incorrect Choice. Enter your choice again");
                         break;
                 }
+                Console.WriteLine("\nDo you want to perform another command operation?");
+                string str = Console.ReadLine();
+                if (str.Equals("no"))
+                    value = false;
             }
         }
 
